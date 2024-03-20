@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: roboto;
+
+}
+html {
+    scroll-behavior: smooth;
+}
+header {
+    background-image: url("images/photo-1505664194779-8beaceb93744.avif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 90vh;
+    z-index: 1;
+    color: white;
+    font-weight: bold;
+    
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+
+
+nav {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    opacity: 0.7;
+}
+nav img {
+    width: 6%;
+}
+nav .nav-item .nav-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    
+    
+}
+nav .nav-item .nav-link a {
+    text-decoration: none;
+    list-style: none;
+    transition: 0.5 ease-in-out;
+    transform: scale(15px);
+
+}
+
+nav .nav-item .nav-link a:hover {
+    background-color: white;
+    box-shadow: 0px 5px 15px  #343a40;
+    border-radius: 20px;
+    transition: 0.5 ease-in-out;
+    transform: scale(15px);
+
+}
+nav .nav-item .nav-link li {
+    
+    margin: 10px;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+.menu-toggle{
+    width: 8%;
+    display: none;
+
+}
+
+.section1 {
+    height: 60vh;
+    background-image: linear-gradient(rgb(240, 240, 240), rgba(241, 233, 233, 0.3)), url('images/groupe.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.section1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    
+    
+}
+.section2 {
+    background-color: #1d3557;
+    color: white;  ;
+   
+    
+}
+.section2 .row  {
+    padding: 5%;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+.section2 .row div img {
+    width: 100%;
+    height: 100%;
+
+}
+.section2 .row div p {
+   text-align: start;
+
+}
+.section3  {
+    padding: 5%;
+    background-color: white;
+}
+.section3 .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 5px 15px  #343a40;
+    padding: 3%;
+    
+    text-align: center;
+    height: 20%;
+}
+.card_img {
+    width: 100%;
+    height: 400px;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card h4 {
+    font-weight: bold;
+    color: red;
+}
+.footer {
+    background-color: #1d3557;
+    color: white;
+} 
+
+
+
+
+
+
+@media screen and (max-width: 900px) {
+    nav .nav-item .nav-link {
+        position: absolute;
+        left: 0%;
+        top: 60px;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        margin-top: -100%;
+        transition: all 0.5s ease;
+        
+       
+    }
+   
+   
+  
+
+    nav .nav-item .nav-link.mobile-menu {
+        margin-top: 0;
+    }
+    .menu-toggle {
+        display: block;
+    }
+
+    .section2 {
+        background-color: white;
+        
+        padding: 5%;
+        color: black;
+        
+    }
+    .section2 .row h1 {
+        display: none;
+        color: black;
+    }
+    .section1 {
+       display: none;
+    }
+    
+}
+
+
+[class*="reveal-"] {
+    opacity: 0;
+    transform: tranlateY(-30px);
+}
+.reveal-visible {
+    opacity: 1;
+    transform: tranlateY(-30px);
+    transition: 0.5s cubic-bezier(.43,-0.47,0,1.01);
+
+}
+
+.reveal-1 {
+    transition-delay: 0.2s ;
+}
+.reveal-2 {
+    transition-delay: 0.4s ;
+}
+.reveal-3 {
+    transition-delay: 0.7s ;
+}
+
+.footer {
+    background-color: #1d3557;
+    color: white;
+} 

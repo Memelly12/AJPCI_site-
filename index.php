@@ -16,8 +16,8 @@
         <div class="container">
             <div class="row home_page">
                 <div class="col-6">
-                    <h1>Association des juristes publicistes de cote d'ivoire <br> (AJPCI)</h1>
-                    <button>rejoignez-nous</button>
+                    <h1 class="reveal-1">Association des juristes publicistes de cote d'ivoire <br> (AJPCI)</h1>
+                    <button class="reveal-2" onclick="window.location.href = 'pages/contact/contact.php';">rejoignez-nous</button>
                 </div>
             </div>
         </div>
@@ -26,7 +26,7 @@
     <section>
         <div class=" container-fluid">
             <div class=" row who_are_you">
-               <div class="col-lg-6 col-12 img_section1 reveal-1">
+               <div class="col-lg-6 col-12 img_section1 reveal-3">
                     <img src="images/image_section2_1.avif" width="50%" alt="">
                 </div>
                <div class="col-lg-6 col-12 txt_section1 reveal-2">
@@ -34,7 +34,7 @@
                     <p>
                     Nous sommes une association de juriste publiciste ivoirien basée à Abidjan. <br> Notre objectif est de promouvoir et développer le droit public en Côte d'Ivoire
                     </p>
-                    <button>En savoirs plus</button>
+                    <button onclick="window.location.href = 'pages/about.php';">En savoirs plus</button>
                </div>
             </div>
         </div>
@@ -50,7 +50,7 @@
                     <img src="images/img_section21.jpg" width="50%" alt="">
                 </div>
                <div class="col-lg-6 col-12 txt_section21 reveal-2 ">
-                    <h2>Cnference autour du droit public</h2>
+                    <h2>Conference autour du droit public</h2>
                     <p>
                     Favorisons la compréhension approfondie du droit public ivoirien en organisant des conférences enrichissantes, <br>
                      réunissant des experts et des passionnés pour partager des perspectives éclairantes.
@@ -93,6 +93,7 @@
         </div>
     </section>
     <section>
+        
        <div class="container">
         <div class="row rubriques "  >
             <h2>Actualités</h2>
@@ -106,7 +107,7 @@
                 
 
                     // Récupérer les deux dernières rubriques
-                    $requete = "SELECT * FROM rubriques ORDER BY id_rubrique DESC LIMIT 2";
+                    $requete = "SELECT * FROM rubriques ORDER BY id_rubrique DESC LIMIT 3";
                     $resultat = mysqli_query($connexion, $requete);
 
                     if (mysqli_num_rows($resultat) > 0) {
@@ -116,14 +117,16 @@
                             $chemin_image = $row["images_rubrique"];
 
                             // Afficher la carte pour chaque rubrique
-                            echo '<div class="col-lg-6 col-12">';
+                            echo '<div class="col-lg-4 col-12">';
                             echo '<div class="carte_rubrique reveal-1">';
-                            echo '<div class ="img_rubrique"  style="background-image: url(pannel/'.$chemin_image. ');"></div>';
+                            echo '<div class ="img_rubrique"  ><img src="pannel/rubriques/'.$chemin_image. '" alt=""></div>';
                            
 
                             echo '<h3>' . $nom_rubrique . '</h3>';
                             echo '<p>' . $message_rubrique . '... </p>';
-                            echo '<button>voir plus</button>';
+                    ?>
+                            <button onclick="window.location.href = 'pages/actualités/actu.php';">voir plus</button>';
+                    <?php
                             echo '</div>';
                             echo' </div>';
                         }
@@ -139,76 +142,9 @@
        </div>
        
     </section>
-    <section>
-           <div class="container-fluid text-dark "  id="contact">
-            <div class="row justify-content-center">
-                <div class="col-12 col-lg-4  mx-5 my-5">
-                    <h2 class="fw-bold ">
-                        Contactez-nous
-                    </h2>
-                    <h4>
-                        email
-                    </h4>
-                    <p>
-                        AJPCI@gmail.com
-                    </p>
-                    
-                    <h4>
-                        Télephone
-                    </h4>
-                    <p>
-                        +225 0705040504
-                    </p>
-                    <div class="icone">
-                    <i class="bi bi-linkedin"></i>
-                    <i class="bi bi-facebook"></i>
-                    </div>
-                   
-                    
-                </div>
-                <div class="col-12 col-lg-4  mx-5 my-5">
-                    <h4>laissez nous un message</h4>
-                    <form class="row" method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
-                        <div class="col-6">
-                        <label for="Prenom" class="form-label">prenom</label>
-                        <input type="text" class="form-control" name="prenom" id="Prenom" required >
-                            
-
-                        </div>
-                        <div class="col-6">
-                            <label for="nom" class="form-label">nom</label>
-                            <input type="text" class="form-control" name="nom" id="nom" required >
-                        </div>
-                        <div class="mb-3 col-6">
-                            <label for="numero" class="form-label">numéro de téléphone</label>
-                            <input type="text" class="form-control" name="telephone" id="telephone" required >
-                            
-                        </div>
-                        <div class="mb-3 col-6">
-                            <label for="email" class="form-label">adresse email</label>
-                            <input type="email" class="form-control" name="email" id="email" required aria-describedby="emailHelp">
-                            
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">message</label>
-                            <textarea name="message" class="form-control" id="message"  rows="3"></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary">envoyer</button>
-                    </form>
-
-
-                   
-                   
-
-
-
-
-                </div>
-            </div>
-           </div>
-
-        </section>
+    <?php
+        require_once('footer.php');
+    ?>
 
 
 

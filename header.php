@@ -7,14 +7,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <nav>
+        <nav class="">
             <img src="images/Logo Associatif_page-0001.jpg" alt="">
             <div class="nav-item">
                 <ul class="nav-link">
-                    <li>Maison</li>
-                    <li>À propos</li>
-                    <li>Actualités</li>
-                    <li>Contact</li>
+                    <a href="index.php" class="menu "><li>Maison</li></a>
+                    <a href="pages/about.php"><li>À propos</li></a>
+                    <a href="pages/actualités/actu.php"><li>Actualités</li></a>
+                    <a href="pages/contact/contact.php"><li>Adhésion</li></a>
+                    <a href="pannel/acceuil.php" class="administration"><li class="administration">administration</li></a>
                 </ul>
             </div>
             <img src="images/hamburger.png" class="menu-toggle" alt="">
@@ -23,6 +24,6 @@
     
 
 
-    
+   
 </body>
 </html>

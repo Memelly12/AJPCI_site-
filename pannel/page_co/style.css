@@ -1,0 +1,45 @@
+body{
+    text-align: center;
+    width: 1000px;
+    margin: auto;
+    font-family: 'open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    
+fieldset{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    
+    
+}
+legend {
+    font-size: bold;
+    color: orangered;
+}
+
+label {
+    font-size: 24px;
+    color:  grey;
+    display : block;
+    margin-Top : 10px;
+    font-Weight : bold;
+}
+button {
+    font-size: 24px;
+    background-color: #03224c;
+    color: white;
+    
+    padding: 10px;
+}
+input {
+    border: 1px solid #ccc;
+    padding : 5px;
+}
+form {
+    padding: 20px;
+}
